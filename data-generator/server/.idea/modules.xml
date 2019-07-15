@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mishas.stuff.data-generator.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mishas.stuff.data-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mishas.stuff.data-generator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mishas.stuff.data-generator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mishas.stuff.data-generator.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mishas.stuff.data-generator.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data-generator.iml" filepath="$PROJECT_DIR$/.idea/modules/data-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data-generator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/data-generator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data-generator.test.iml" filepath="$PROJECT_DIR$/.idea/modules/data-generator.test.iml" />
+    </modules>
+  </component>
+</project>

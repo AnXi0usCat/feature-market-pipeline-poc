@@ -1,0 +1,8 @@
+com/mishas/stuff/generator/Direction.class
+com/mishas/stuff/generator/TransactionGenerator.class
+com/mishas/stuff/persistence/DataSource.class
+com/mishas/stuff/generator/Transaction$TransactionBuilder.class
+com/mishas/stuff/persistence/TransactionRepository.class
+com/mishas/stuff/generator/Transaction.class
+com/mishas/stuff/App.class
+com/mishas/stuff/generator/AccountUIDHolder.class
