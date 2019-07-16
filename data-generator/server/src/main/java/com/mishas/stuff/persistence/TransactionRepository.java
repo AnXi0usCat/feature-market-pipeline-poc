@@ -30,7 +30,7 @@ public class TransactionRepository {
         } catch (SQLException se) {
             try {
                 connection.rollback();
-            } catch (SQLException | NullPointerException sq2) {
+            } catch (SQLException | NullPointerException sq1) {
                 // empty
             }
         } finally {

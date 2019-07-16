@@ -6,9 +6,6 @@ services:
       - ./postgres/:/docker-entrypoint-initdb.d/
     ports:
       - "5000:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
   data-generator:
     build: ./data-generator/server/
     ports:

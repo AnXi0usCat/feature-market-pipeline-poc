@@ -15,7 +15,7 @@ import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 
 public class TransactionGenerator {
 
-    private static final int CORE_POOL_SIZE = 10;
+    private static final int CORE_POOL_SIZE = 1;
 
     private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(CORE_POOL_SIZE);
 
@@ -29,8 +29,8 @@ public class TransactionGenerator {
 
     private void stream() {
         executor.scheduleAtFixedRate(() -> {
-//                    System.out.println(Thread.currentThread().toString() +
-//                            " Latest transaction data: " + createRandomTransaction().toString());
+                    System.out.println(Thread.currentThread().toString() +
+                            " Latest transaction data: " + createRandomTransaction().toString());
                     transactionRepository.save(createRandomTransaction());
                 },
                 1, 1, TimeUnit.MILLISECONDS);
