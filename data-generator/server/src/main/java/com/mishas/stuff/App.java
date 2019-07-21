@@ -23,3 +23,19 @@ public class App {
     }
 
 }
+//{
+//  "name": "data-generator-connector",
+//        "config": {
+//        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+//        "tasks.max": "1",
+//        "database.hostname": "postgres",
+//        "database.port": "5432",
+//        "database.user": "data_generator",
+//        "database.password": "data_generator",
+//        "database.dbname" : "data_generator",
+//        "database.server.name": "data_generator_server",
+//        "schema.whitelist": "data_schema",
+//        "database.history.kafka.bootstrap.servers": "kafka:9092",
+//        "database.history.kafka.topic": "data_geneator_migrations.transactions"
+//        }
+//}

@@ -5,10 +5,11 @@
     <parent>
         <artifactId>data-generator</artifactId>
         <groupId>com.mishas.stuff</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <artifactId>connector</artifactId>
 
@@ -16,9 +17,8 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
-            <version>2.3.0</version>
+            <version>2.2.0</version>
         </dependency>
     </dependencies>
-
 
 </project>

@@ -12,7 +12,7 @@ public class DataSource {
     private static HikariDataSource ds;
 
     static {
-        config.setJdbcUrl("jdbc:postgresql://postgres:5432/data_generator_db");
+        config.setJdbcUrl("jdbc:postgresql://postgres:5432/data_generator");
         config.setUsername("data_generator");
         config.setPassword("data_generator");
         config.setMaximumPoolSize(30);

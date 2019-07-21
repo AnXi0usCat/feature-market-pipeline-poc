@@ -1,5 +1,6 @@
 package com.mishas.stuff;
 
+import com.mishas.stuff.consumer.DataConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +11,13 @@ public class ConsumerApp {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
         Thread thread = new Thread(
-               // () -> new ().streamAll()
+                () -> {
+                    try {
+                        new DataConsumer().runConsumer();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
         );
         try {
             thread.start();

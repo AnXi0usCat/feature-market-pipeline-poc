@@ -1,14 +1,17 @@
 -- create new user for the mastercard database --
-CREATE ROLE data_generator WITH LOGIN PASSWORD 'data_generator';
+--CREATE ROLE data_generator WITH LOGIN PASSWORD 'data_generator';
+
+CREATE SCHEMA data_schema;
+SET search_path TO data_schema;
 
 -- create a new database for the mastercard service
-CREATE DATABASE data_generator_db WITH OWNER data_generator;
+--CREATE DATABASE data_generator_db WITH OWNER data_generator;
 
 -- connect to the mastercard_database
-\connect data_generator_db;
+-- connect data_generator_db;
 
 -- create transaction table
-CREATE TABLE IF NOT EXISTS public.transaction(
+CREATE TABLE IF NOT EXISTS data_schema.transaction(
   transaction_uid UUID PRIMARY KEY NOT NULL,
   account_uid UUID NOT NULL,
   created_timestamp TIMESTAMP NOT NULL,
@@ -19,8 +22,8 @@ CREATE TABLE IF NOT EXISTS public.transaction(
 
 -- grant CRUD rights to data_generator user
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON ALL TABLES IN SCHEMA public
+ON ALL TABLES IN SCHEMA data_schema
 TO data_generator;
 
 -- grant this too
-grant all privileges on all sequences in schema public to data_generator;
+grant all privileges on all sequences in schema data_schema to data_generator;

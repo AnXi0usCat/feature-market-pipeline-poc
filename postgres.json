@@ -1,0 +1,16 @@
+{
+        "name": "inventory-connector",
+        "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "tasks.max": "1",
+        "database.hostname": "postgres",
+        "database.port": "5432",
+        "database.user": "data_generator",
+        "database.password": "data_generator",
+        "database.dbname" : "data_generator_db",
+        "database.server.name": "postgres",
+        "schema.whitelist": "data_generator_db",
+        "database.history.kafka.bootstrap.servers": "kafka:9092",
+        "database.history.kafka.topic": "postgres.data_generator_db.transaction"
+        }
+        }

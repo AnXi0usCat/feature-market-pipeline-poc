@@ -13,13 +13,13 @@
     <module>consumer</module>
   </modules>
 
-  <repositories>
-    <repository>
-      <id>MavenCentral</id>
-      <name>Maven repository</name>
-      <url>http://repo1.maven.org/maven2</url>
-    </repository>
-  </repositories>
+  <!--<repositories>-->
+    <!--<repository>-->
+      <!--<id>MavenCentral</id>-->
+      <!--<name>Maven repository</name>-->
+      <!--<url>http://repo1.maven.org/maven2</url>-->
+    <!--</repository>-->
+  <!--</repositories>-->
 
   <dependencies>
 

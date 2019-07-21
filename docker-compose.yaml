@@ -1,15 +1,22 @@
 version: '3'
 services:
   postgres:
-    image: "postgres:latest"
+    image: "debezium/example-postgres:latest"
     volumes:
       - ./postgres/:/docker-entrypoint-initdb.d/
     ports:
       - "5000:5432"
+    environment:
+      - POSTGRES_USER=data_generator
+      - POSTGRES_PASSWORD=data_generator
   data-generator:
     build: ./data-generator/server/
     ports:
       - "8088:8080"
+  consumer:
+    build: ./consumer/
+    ports:
+      - "8089:8080"
   zookeeper:
     image: "debezium/zookeeper:0.9.5.Final"
     ports:
@@ -32,11 +39,11 @@ services:
       - "kafka"
       - "postgres"
     environment:
-      - "BOOTSTRAP_SERVERS=kafka:9092"
-      - "GROUP_ID=1"
-      - "CONFIG_STORAGE_TOPIC=my_connect_configs"
-      - "OFFSET_STORAGE_TOPIC=my_connect_offsets"
-      - "STATUS_STORAGE_TOPIC=my_connect_statuses"
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - GROUP_ID=1
+      - CONFIG_STORAGE_TOPIC=my_connect_configs
+      - OFFSET_STORAGE_TOPIC=my_connect_offsets
+      - STATUS_STORAGE_TOPIC=my_connect_statuses
 
 volumes:
   postgres:

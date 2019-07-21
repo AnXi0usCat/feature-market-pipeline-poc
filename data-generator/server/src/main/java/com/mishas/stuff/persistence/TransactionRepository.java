@@ -8,7 +8,7 @@ public class TransactionRepository {
 
     public void save(Transaction transaction) {
 
-        String sql = "INSERT INTO public.transaction(transaction_uid, account_uid, " +
+        String sql = "INSERT INTO data_schema.transaction(transaction_uid, account_uid, " +
                 "created_timestamp, amount, direction, currency_code) VALUES (?, ?, ?, ?, ?, ?)";
 
         Connection connection = null;
